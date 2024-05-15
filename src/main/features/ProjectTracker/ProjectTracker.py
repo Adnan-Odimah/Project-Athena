@@ -96,8 +96,8 @@ class ProjectTracker:
             list[dict]: The list of updates
         """
         self.cursor.execute(
-            "SELECT updates.update_description FROM updates, projects WHERE projects.project_name = ?",
+            """SELECT updates.update_description FROM updates, projects
+            WHERE projects.project_name = ?""",
             (project_name,),
         )
         return self.cursor.fetchall()
-

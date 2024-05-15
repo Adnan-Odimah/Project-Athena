@@ -13,7 +13,7 @@ def listen_for_audio(mode: int) -> str:
         str: The text the user said
     """
     if mode == 2:
-        return
+        return ""
     # Create a recognizer object
     recognizer = sr.Recognizer()
 

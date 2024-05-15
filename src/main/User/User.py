@@ -1,4 +1,5 @@
 class User:
+    """A class to represent a user"""
     def __init__(self, data: dict) -> None:
         self.name = data["name"] if "name" in data else None
         self.birthday = data["birthday"] if "birthday" in data else None
@@ -19,7 +20,7 @@ class User:
             }
         )
 
-    def getConfig(self) -> dict:
+    def get_config(self) -> dict:
         """Returns the config dictionary of the user
 
         Returns:

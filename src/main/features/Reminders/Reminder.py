@@ -1,5 +1,5 @@
 """
-This is the Reminder class. It is used to create a reminder object that can be used to store reminders.
+This is the Reminder class. It is used to create a reminder object.
 """
 
 from datetime import datetime
@@ -23,7 +23,7 @@ class Reminder:
         """Checks if its time for the Reminder
 
         Returns:
-            bool or str:
+            str: The reason for the Reminder if it rings, otherwise None.
         """
         if not self.deleted and not self.played:
             for day, time in self.repeat:
@@ -32,6 +32,7 @@ class Reminder:
                 ) and day == datetime.now().strftime("%A"):
                     return self.reason
         self.played = False
+        return None
 
     def stop(self):
         """Stops the Reminder"""

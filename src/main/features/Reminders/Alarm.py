@@ -27,7 +27,7 @@ class Alarm:
         """Checks if the alarm should ring
 
         Returns:
-            bool or str:
+            str: The reason for the alarm if it rings, otherwise None.
         """
         if not self.deleted and not self.played and not self.channel.get_busy():
             for day, time in self.repeat:
@@ -37,6 +37,7 @@ class Alarm:
                     self.ring()
                     return self.reason
         self.played = False
+        return None
 
     def ring(self):
         """Rings the alarm"""

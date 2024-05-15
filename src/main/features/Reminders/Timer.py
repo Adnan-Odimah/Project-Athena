@@ -25,7 +25,7 @@ class Timer:
         """Checks if the timer should ring
 
         Returns:
-            bool or str:
+            str: The reason for the timer if it rings, otherwise None.
         """
         if not self.played and not self.deleted:
             if datetime.now().strftime(
@@ -33,6 +33,7 @@ class Timer:
             ) == self.time_to_ring.strftime("%Y-%m-%d %H:%M:%S"):
                 self.ring()
                 return self.reason
+        return None
 
     def ring(self):
         """Rings the timer"""

@@ -1,6 +1,5 @@
 """ Contains the class HabitTracker that has all the habits the user has. """
-
-from features.HabitTracker.Habit import Habit
+from features import Habit
 
 
 class HabitTracker:

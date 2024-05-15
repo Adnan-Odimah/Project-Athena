@@ -1,3 +1,4 @@
+"""Main class for the audio engine of Project Athena"""
 import subprocess
 import pygame
 

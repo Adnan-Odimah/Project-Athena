@@ -1,8 +1,7 @@
-from features import *
-from speechfunc import SpeechEngine
-
+"""Main module of the program."""
 def main():
-    pass
+    """Main function of the program."""
+
 
 if __name__ == "__main__":
     main()
