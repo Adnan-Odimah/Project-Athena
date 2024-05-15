@@ -7,7 +7,7 @@ class ProjectTracker:
     """The class for the project tracker"""
 
     def __init__(self, username: str) -> None:
-        self.conn = sqlite3.connect("projects.db")
+        self.conn = sqlite3.connect("data/Databases/projects.db")
         self.cursor = self.conn.cursor()
         self.cursor.execute(
             """CREATE TABLE IF NOT EXISTS projects (
@@ -101,8 +101,3 @@ class ProjectTracker:
         )
         return self.cursor.fetchall()
 
-
-x = ProjectTracker("test")
-x.update_project("Project 1", "This is the first update")
-# x.add_project("Project 1", "This is the first project")
-print(x.get_update("Project 1"))

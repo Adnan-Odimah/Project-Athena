@@ -35,7 +35,7 @@ class MusicPlayer:
         if not os.path.exists("music"):
             os.makedirs("music")
 
-        self.ydl_opts["outtmpl"] = f"music/{song_name}.mp3"
+        self.ydl_opts["outtmpl"] = f"audio/music/{song_name}.mp3"
 
         with youtube_dl.YoutubeDL(self.ydl_opts) as ydl:
             ydl.extract_info(f"ytsearch:{song_name}")

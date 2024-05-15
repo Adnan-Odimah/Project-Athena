@@ -1,10 +1,10 @@
 import subprocess
 import pygame
 
-from MusicPlayer.MusicPlayer import MusicPlayer
+from features import MusicPlayer
 
 
-class AudioEngine:
+class SpeechEngine:
     """Main class for the audio engine of Project Athena"""
 
     def __init__(self, config: dict) -> None:
@@ -57,7 +57,7 @@ class AudioEngine:
             self.alarms_channel.set_volume(0.1)
 
             # Load the audio file
-            pygame.mixer.music.load("sounds/temp.mp3")
+            pygame.mixer.music.load("audio/sounds/temp.mp3")
 
             # Play the audio file
             pygame.mixer.music.play()
