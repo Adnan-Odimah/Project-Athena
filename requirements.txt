@@ -1,0 +1,7 @@
+pygame==2.5.2
+yt-dlp==2024.4.9
+edge-tts==6.1.11
+SpeechRecognition==3.10.4
+spacy==3.7.4
+pandas==2.2.2
+scikit-learn==1.4.2
