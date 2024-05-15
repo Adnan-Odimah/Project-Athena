@@ -1,0 +1,82 @@
+Text,Intent
+"Automate weekly report generation in Excel",AUTOMATION
+"Open Chrome and search for 'how to automate tasks'",AUTOMATION
+"Open Netflix and play 'Stranger Things'",AUTOMATION
+"Open YouTube and play a cooking tutorial",AUTOMATION
+"Check progress on Project Y",PROJECT_TRACKER
+"Update progress on Project X",PROJECT_TRACKER
+"I did my meditation today",HABIT_TRACKER
+"Meditated for 20 minutes today",HABIT_TRACKER
+"I want to start playing the piano",HABIT_TRACKER
+"Add milk to my grocery list",GROCERY_TRACKER
+"Purchase eggs, bread, and cheese from the grocery store",GROCERY_TRACKER
+"Remind me to buy groceries tomorrow",REMINDER
+"Remind me to water the plants at 6 PM",REMINDER
+"Remind me to call Mom on Sunday",REMINDER
+"Set a alarm for 7 AM",ALARM
+"Set an alarm for 8 AM",ALARM
+"Set a timer for 30 minutes",TIMER
+"Start a timer for 1 hour",TIMER
+"Play my favorite song",MUSIC
+"Play Bohemian Rhapsody",MUSIC
+"Play Shape of You by Ed Sheeran",MUSIC
+"Play 'Thriller' by Michael Jackson",MUSIC
+"Play Hotel California",MUSIC
+"Play 'Smells Like Teen Spirit' by Nirvana",MUSIC
+"Play 'Stairway to Heaven' by Led Zeppelin",MUSIC
+"Play 'Billie Jean' by Michael Jackson",MUSIC
+"Play 'Sweet Child o' Mine' by Guns N' Roses",MUSIC
+"Play 'Hey Jude' by The Beatles",MUSIC
+"Tell me a joke",CONVERSATION
+"Tell me a funny story",CONVERSATION
+"Hey, how's it going?",CONVERSATION
+"Good morning! What's on your mind?",CONVERSATION
+"Hi there! What can I do for you today?",CONVERSATION
+"Hey, did you hear about the new movie?",CONVERSATION
+"Hello! How was your day?",CONVERSATION
+"Hey, can you tell me a fun fact?",CONVERSATION
+"Hi! What's the weather like outside?",CONVERSATION
+"Hey, I'm feeling hungry. Any food recommendations?",CONVERSATION
+"Hello! What's the latest news?",CONVERSATION
+"Hey, long time no see! How have you been?",CONVERSATION
+"I moved, I now live in New York",SETTINGS
+"Turn down the volume to 3",SETTINGS
+"What will be the temperature in New York tomorrow?",WEATHER
+"Will it rain tomorrow?",WEATHER
+"Can you check if it's going to snow next week?",WEATHER
+"Tell me about the current weather conditions",WEATHER
+"Is it going to be sunny this afternoon?",WEATHER
+"What's the weather forecast for the weekend?",WEATHER
+"Automate monthly expense tracking in Excel",AUTOMATION
+"Set up automated email reminders for project deadlines",AUTOMATION
+"Open Spotify and play a workout playlist",AUTOMATION
+"Automatically back up important files to Google Drive",AUTOMATION
+"Check status of Project Z",PROJECT_TRACKER
+"Review progress on Project Alpha",PROJECT_TRACKER
+"Update project timeline for Project Beta",PROJECT_TRACKER
+"Record daily water intake in habit tracker app",HABIT_TRACKER
+"Practice coding for 1 hour every day",HABIT_TRACKER
+"Start a daily journaling habit",HABIT_TRACKER
+"Add eggs, bread, and cereal to grocery list",GROCERY_TRACKER
+"Order fresh produce from the local farmer's market",GROCERY_TRACKER
+"Create a meal plan for the week",GROCERY_TRACKER
+"Remind me to attend the team meeting at 10 AM tomorrow",REMINDER
+"Set a reminder to pay bills on the 15th of each month",REMINDER
+"Remind me to take my medication at noon every day",REMINDER
+"Set an alarm for 6:30 AM",ALARM
+"Set a timer for 45 minutes",TIMER
+"Start a 20-minute meditation session",TIMER
+"Play 'Bohemian Rhapsody' by Queen",MUSIC
+"Shuffle my favorite playlist",MUSIC
+"Play 'Shape of You' by Ed Sheeran",MUSIC
+"Tell me a funny joke",CONVERSATION
+"Share an interesting fact",CONVERSATION
+"How's the weather today?",WEATHER
+"Any movie recommendations for tonight?",CONVERSATION
+"Hey, what's up?",CONVERSATION
+"Adjust screen brightness to 50%",SETTINGS
+"Change notification sound to 'Ding'",SETTINGS
+"What will be the temperature in London next week?",WEATHER
+"Is there a chance of thunderstorms tomorrow?",WEATHER
+"Check if it's going to be windy this evening",WEATHER
+"Tell me the weather forecast for the next 7 days",WEATHER
