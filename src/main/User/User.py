@@ -1,5 +1,6 @@
 class User:
     """A class to represent a user"""
+
     def __init__(self, data: dict) -> None:
         self.name = data["name"] if "name" in data else None
         self.birthday = data["birthday"] if "birthday" in data else None

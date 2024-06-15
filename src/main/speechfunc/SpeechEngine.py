@@ -1,8 +1,10 @@
 """Main class for the audio engine of Project Athena"""
+
 import subprocess
 import pygame
 
-from features import MusicPlayer
+from features import MusicPlayer as mp
+
 
 
 class SpeechEngine:
@@ -12,7 +14,7 @@ class SpeechEngine:
         self.settings = config["settings"]
         self.user_info = config["user_info"]
 
-        self.music_player = MusicPlayer()
+        self.music_player = mp.MusicPlayer()
 
         self.currently_playing = None
 

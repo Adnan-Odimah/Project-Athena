@@ -1,15 +1,45 @@
 import spacy
 
+
 class Context:
     """
     class used to obtain the context for different cases throughout Athena
+    #TODO: Fix for sentences like every 15 minutes / every 2 hours
+    #TODO: Fix tasks
     """
+
     def __init__(self):
         self.nlp = spacy.load("en_core_web_md")
-        self.number_dict = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20, "twenty-one": 21, "twenty-two": 22, "twenty-three": 23, "twenty-four": 24}
+        self.number_dict = {
+            "zero": 0,
+            "one": 1,
+            "two": 2,
+            "three": 3,
+            "four": 4,
+            "five": 5,
+            "six": 6,
+            "seven": 7,
+            "eight": 8,
+            "nine": 9,
+            "ten": 10,
+            "eleven": 11,
+            "twelve": 12,
+            "thirteen": 13,
+            "fourteen": 14,
+            "fifteen": 15,
+            "sixteen": 16,
+            "seventeen": 17,
+            "eighteen": 18,
+            "nineteen": 19,
+            "twenty": 20,
+            "twenty-one": 21,
+            "twenty-two": 22,
+            "twenty-three": 23,
+            "twenty-four": 24,
+        }
 
     def get_reminders_context(self, sentence: str) -> dict:
-        #TODO: fix for sentences that use compound clauses
+        # TODO: fix for sentences that use compound clauses
         # e.g. do x next friday night, only gets friday but not "next"
         """Gets the context for the reminders
 
@@ -31,19 +61,17 @@ class Context:
             if time:
                 extracted_info["time"] = time
 
-
-
             if token.ent_type_ == "DATE":
                 children = [c for c in token.children]
                 if len(children) > 0:
                     if children[0].dep_ == "det":
-                        extracted_info["frequency"] = f"{children[0].lower_} {token.lower_}"
+                        extracted_info["frequency"] = (
+                            f"{children[0].lower_} {token.lower_}"
+                        )
                     else:
                         extracted_info["date"] = f"{children[0].lower_} {token.lower_}"
                 else:
                     extracted_info["date"] = token.text
-
-
 
             if token.dep_ == "compound":
                 children = [c for c in token.head.children]
@@ -84,7 +112,7 @@ class Context:
         time = None
 
         if token.ent_type_ == "TIME":
-            if token.lower_ in ['am', 'pm']:
+            if token.lower_ in ["am", "pm"]:
                 return None
 
             if token.head.dep_ == "pobj":
@@ -97,3 +125,20 @@ class Context:
                 time = token.lower_
 
         return time
+
+
+"""sentences = [
+    "Remind me to play football next monday at midday",
+    "Remind me to submit the report next friday night",
+    "Remind me to buy groceries every monday at two pm",
+    "Set an alarm every monday at 3 am",
+    "Set a timer for 15 minutes",
+    "Remind me to go to the gym every 15 minutes",
+    "Remind me to clap my hands every 2 hours",
+    "Remind me to go to the supermarket every week",
+]
+classifier = Context()
+
+for sentence in sentences:
+    print(sentence, "   ", classifier.get_reminders_context(sentence))
+"""

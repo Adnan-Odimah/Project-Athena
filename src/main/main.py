@@ -1,7 +1,9 @@
 """Main module of the program."""
-def main():
-    """Main function of the program."""
+
+from Athena import Athena
+from User import User
 
 
 if __name__ == "__main__":
-    main()
+    Athena(User.User({})).main_loop()
+

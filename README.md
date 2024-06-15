@@ -10,19 +10,19 @@ Text classification and intent getting etc.
 - Timers and Alarms and Reminders ###DONE###
 - Grocery Tracking ## DONE ##
 #TODO:
-- Automation for desktop use (open chrome, watch this on youtube/netflix, etc.) ##  need to do playback 
+- Incorrect input function for different AI, self-learning for each user.
 - Habit Tracking/Building ## find a way to add reminders to actual program
 - Project Tracking / management ## ADD USER specific?
-- Weather
-- Fact Checker (google etc.) 
-- proper settings implementation to make it user friendly 
-- Send Emails 
-- Notification information 
-- VSCode Voice commands 
-- Make menu that shows when ur speaking to it, etc. maybe
+- Weather  
+- Fact Checker (google etc.)  
+- proper settings implementation to make it user friendly  
+- Send Emails  
+- Notification information  
+- VSCode Voice commands  
+- Make menu that shows when ur speaking to it, etc. maybe 
 
 ## then:
-- Make alarm repeating
+- Make alarm repeating 
 - Trading bot aspect 
 - Order food
 - Journaling / notetaking

@@ -3,11 +3,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
-from Commands import Commands
 
 
-def classify(text: str) -> Commands:
-    dataset = pd.read_csv("data/customData.csv")
+def classify(text: str):
+    dataset = pd.read_csv("data/Categoriser/customData.csv")
 
     # Convert text data into TF-IDF vectors
     vectorizer = TfidfVectorizer()
@@ -22,8 +21,9 @@ def classify(text: str) -> Commands:
     return predicted
 
 
-dataset = pd.read_csv("data/customData.csv")
-test_data = pd.read_csv("data/test.csv")
+"""
+dataset = pd.read_csv("data/Categoriser/customData.csv")
+test_data = pd.read_csv("data/Categoriser/test.csv")
 test_dta = ["whats the weather like today", "wake me up at 7 am"]
 
 # Convert text data into TF-IDF vectors
@@ -44,3 +44,4 @@ print(classification_report(test_data["Intent"], y_pred))
 
 X_test_tfidf = vectorizer.transform(test_dta)
 print(classifier.predict(X_test_tfidf))
+"""
