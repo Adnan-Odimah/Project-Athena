@@ -16,8 +16,10 @@ def classify(text: str):
     svc = SVC(kernel="linear")
     svc.fit(vectorized_texts, dataset["Intent"])
 
+    vector_in = vectorizer.transform([text])
+
     # Make predictions on the test set
-    predicted = svc.predict(text)
+    predicted = svc.predict(vector_in)
     return predicted
 
 

@@ -3,8 +3,7 @@
 import subprocess
 import pygame
 
-from features import MusicPlayer as mp
-
+from features import MusicPlayer
 
 
 class SpeechEngine:
@@ -14,7 +13,7 @@ class SpeechEngine:
         self.settings = config["settings"]
         self.user_info = config["user_info"]
 
-        self.music_player = mp.MusicPlayer()
+        self.music_player = MusicPlayer()
 
         self.currently_playing = None
 
@@ -49,7 +48,7 @@ class SpeechEngine:
         command = (
             'edge-tts --voice "'
             + self.voice
-            + f'" --text "{text}" --write-media sounds/temp.mp3'
+            + f'" --text "{text}" --write-media audio/sounds/temp.mp3'
         )
 
         # Execute the TTS command

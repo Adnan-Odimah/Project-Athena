@@ -5,6 +5,7 @@ from NLP import Context
 from NLP.IntentClassification import commandRecognition
 from User import User
 from speechfunc import SpeechEngine, listener
+from features import Alarm
 import threading as th
 import time
 
@@ -32,12 +33,16 @@ class Athena:
         # request = listener.listen_for_audio(self.mode)
 
         req_type = commandRecognition.classify(request)
+        print(req_type)
         if req_type == "ALARM":
-            print(self.context_model.get_reminders_context(request))
-            self.speechEng.speak("SET UP ALARM")
-            print("SET UP ALARM")
+            context = self.context_model.get_reminders_context(request)
+            self.running.append(Alarm.Alarm((context), self.user.get_config()))
+            self.speechEng.speak(
+                f"Set up an alarm at {context['time']} on {context['date']} for {context['task']}"
+            )
+            if context["frequency"] is not None:
+                self.speechEng.speak(f"The alarm will repeat {context['frequency']}")
 
     def background(self):  ## CHANGE THIS
         while True:
-            print(time.time())
             time.sleep(1)
