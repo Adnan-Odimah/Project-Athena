@@ -3,6 +3,8 @@
 import os
 import queue
 from functools import lru_cache
+from random import shuffle
+import random
 import yt_dlp as youtube_dl
 
 
@@ -24,10 +26,15 @@ class MusicPlayer:
                 }
             ],
         }
+        self.shuffle = False
 
     def get_next(self) -> str:
         """gets the next song in the queue"""
-        return self.queue.get_nowait()
+        if not self.shuffle:
+            return self.queue.get_nowait()
+        else:
+            random.shuffle(self.queue)
+            return self.queue.get_nowait()
 
     @lru_cache
     def fetch_song(self, song_name: str) -> str:
@@ -49,3 +56,7 @@ class MusicPlayer:
     def clear_q(self) -> None:
         """clears the queue"""
         self.queue = queue.Queue()
+
+    def toggle_shuffle(self) -> None:
+        """Toggles the shuffle mode of the MusicPlayer"""
+        self.shuffle = not self.shuffle

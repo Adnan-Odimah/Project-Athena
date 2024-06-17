@@ -1,7 +1,9 @@
 """ Contains the Alarm class. """
 
+# pylint: disable=C0103
 from datetime import datetime
 import pygame
+from _general import get_next_weekday
 
 
 class Alarm:
@@ -15,9 +17,11 @@ class Alarm:
         )
         self.channel = pygame.mixer.Channel(2)
         self.reason = context["task"]
-        self.timeToRing = context['time']
-        self.date #TODO:
-        self.sound = "sounds/" + config[] #TODO:
+        self.timeToRing = context["time"]
+
+        date = get_next_weekday(context["date"])
+
+        self.sound = "sounds/alarms/" + config["settings"]["alarm"]
 
         self.played = False
         self.deleted = False

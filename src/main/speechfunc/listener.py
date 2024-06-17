@@ -29,7 +29,7 @@ def listen_for_audio(mode: int) -> str:
 
     try:
         # Use the recognizer to convert speech to text
-        text = recognizer.recognize_google(audio)
+        text: str = str(recognizer.recognize_google(audio))
 
         if mode == 1:
             if "Athena" in text:

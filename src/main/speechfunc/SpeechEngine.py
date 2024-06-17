@@ -1,5 +1,8 @@
 """Main class for the audio engine of Project Athena"""
 
+# To avoid showing errors for pygame.init() (line 24)
+# pylint: disable=no-member disable=C0103
+from os import path
 import subprocess
 import pygame
 
@@ -69,7 +72,8 @@ class SpeechEngine:
                 pygame.time.Clock().tick(10)
 
         except Exception as e:
-            print(f"An error occurred: {e}")
+            raise e
+            # print(f"An error occurred: {e}")
 
         finally:
             # Clean up: unload the audio file
@@ -108,3 +112,23 @@ class SpeechEngine:
             self.music_channel.pause()
         else:
             self.music_channel.unpause()
+
+    def shuffle(self) -> bool:
+        """toggles the shuffle mode
+        returns:
+        bool: the current shuffle state
+        """
+        self.music_player.toggle_shuffle()
+        return self.music_player.shuffle
+
+    def remove(self, song: str) -> bool:
+        """Removes a song from the queue
+
+        Args:
+            song (str): the song to remove
+
+        Returns:
+            bool: weather the song was found and removed
+        """
+        path_to_remove = self.music_player.fetch_song(song)
+        self.music_player.queue.remove(path_to_remove)

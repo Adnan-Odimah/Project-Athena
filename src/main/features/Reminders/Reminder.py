@@ -8,13 +8,8 @@ from datetime import datetime
 class Reminder:
     """Reminder class to handle the reminder aspect of Project Athena"""
 
-    def __init__(
-        self,
-        repeat: list[tuple[str, datetime]],
-        reason: str = "",
-    ) -> None:
-        self.repeat = repeat
-        self.reason = reason
+    def __init__(self, context: dict) -> None:
+        self.context
 
         self.played = False
         self.deleted = False

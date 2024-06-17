@@ -18,6 +18,7 @@ class User:
                 "sarcasm": 0.0,
                 "disabled": [],
                 "mode": 1,
+                "alarm": "default.mp3",
             }
         )
 
