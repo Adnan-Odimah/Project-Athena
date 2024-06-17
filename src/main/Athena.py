@@ -78,7 +78,9 @@ class Athena:
 
     def background(self):  ## CHANGE THIS TODO:
         """Does the background tasks required"""
-        while True:
+        while (
+            True
+        ):  # TODO: MAKE THIS LOOP ONLY HAPPEN WHEN RUNNING ATTRIBUTE HAS THINGS WITHIN IT
             time.sleep(1)
 
     def process_alarm(self, text: str):

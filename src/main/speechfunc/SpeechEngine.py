@@ -2,7 +2,6 @@
 
 # To avoid showing errors for pygame.init() (line 24)
 # pylint: disable=no-member disable=C0103
-from os import path
 import subprocess
 import pygame
 

@@ -3,7 +3,9 @@
 from datetime import datetime, timedelta
 
 
-def get_next_weekday(target_weekday_str):
+def get_next_weekday(
+    target_weekday_str,
+):  # TODO: ADD PROPER WAY TO HANDLE INPUTTED DATES
     """
     Returns the date of the next specified weekday.
 
@@ -35,3 +37,13 @@ def get_next_weekday(target_weekday_str):
         days_ahead += 7
     next_weekday = today + timedelta(days=days_ahead)
     return next_weekday.date()
+
+
+def context_to_datetime(context: dict) -> datetime:
+    time = context["time"]
+
+    if "next" in context["date"]:
+        date = get_next_weekday(context["date"])
+
+    elif "":
+        pass
