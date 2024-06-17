@@ -9,16 +9,15 @@ class Alarm:
     Alarm class to handle the alarm aspect of Project Athena
     """
 
-    def __init__(
-        self,
-        repeat: list[tuple[str, datetime]],
-        reason: str = "",
-        sound: str = "basic_alarm.mp3",
-    ) -> None:
-        self.repeat = repeat
+    def __init__(self, context: dict, config: dict) -> None:
+        self.repeat = (
+            context["frequency"] if context.get("frequency") is not None else False
+        )
         self.channel = pygame.mixer.Channel(2)
-        self.reason = reason
-        self.sound = "sounds/" + sound
+        self.reason = context["task"]
+        self.timeToRing = context['time']
+        self.date #TODO:
+        self.sound = "sounds/" + config[] #TODO:
 
         self.played = False
         self.deleted = False
