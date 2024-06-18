@@ -45,6 +45,7 @@ class TestUser(unittest.TestCase):
                 "sarcasm": 0.0,
                 "disabled": [],
                 "mode": 1,
+                "alarm": "default.mp3"
             }
         }
         self.assertEqual(config, expected_config)

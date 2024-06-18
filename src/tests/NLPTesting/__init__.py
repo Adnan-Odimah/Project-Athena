@@ -1,0 +1,1 @@
+from NLPTesting.test_categorisation import TestCategorisation
