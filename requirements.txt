@@ -4,9 +4,5 @@ edge-tts==6.1.11
 SpeechRecognition==3.10.4
 spacy==3.7.4
 pandas==2.2.2
-openmeteo_requests==1.2.0
-scikit-learn==1.4.2
-requests-cache==1.2.0
-retry-requests==2.0.0
+scikit-learn==1.5.0
 numpy==1.26.4
-playwright==1.43.0

@@ -23,7 +23,7 @@ class Athena:
         self.speech_eng = SpeechEngine(user.get_config())
         self.running = []
         self.voice = user.preferences.get("voice")
-        self.context_model = Context.Context()
+        self.context_model = Context()
 
     def main_loop(self):
         """The main athena loop, run when starting the program"""

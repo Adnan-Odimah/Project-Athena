@@ -6,9 +6,6 @@ to start this will be a method of learning and implementing features which I'd c
 Text classification and intent getting etc.
 
 ## I plan to add the following features first:
-- Music Player ###DONE###
-- Timers and Alarms and Reminders ###DONE###
-- Grocery Tracking ## DONE ##
 #TODO:
 - Incorrect input function for different AI, self-learning for each user.
 - Habit Tracking/Building ## find a way to add reminders to actual program
@@ -20,6 +17,8 @@ Text classification and intent getting etc.
 - Notification information  
 - VSCode Voice commands  
 - Make menu that shows when ur speaking to it, etc. maybe 
+
+TESTING FOR DIFFERENT ELEMENTS
 
 ## then:
 - Make alarm repeating 

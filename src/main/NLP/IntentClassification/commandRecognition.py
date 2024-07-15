@@ -1,10 +1,13 @@
 """ Contains the classification command for text categories"""
 
 import pandas as pd
+import sklearn
 
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import SVC
-
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.svm import SVC
+except ModuleNotFoundError:
+    import sklearn
 
 def classify(text: str) -> str:
     """Classifies the text into the proper category to help with processing the command
